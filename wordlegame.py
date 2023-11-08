@@ -32,9 +32,9 @@ def get_feedback(corr_word:str, answer:str) -> str:
     feedback = " "
 
     for i in range(5):
-        if user_input[i] == random_word[i] :
-            feedback += [i]
-        elif user_input[i] in random_word :
+        if answer[i] == corr_word[i]:
+            feedback += answer[i]
+        elif answer[i] in corr_word :
             feedback += '#'
         else: 
             feedback += '_'
